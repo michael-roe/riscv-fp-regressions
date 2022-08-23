@@ -40,7 +40,8 @@ _start:
 	jalr	x5
 
 .global _ok
-        slli t0, zero, 1
+	li t0, 1
+        slli t0, t0, 1
 	ori t0, t0, 1
 	la t1, tohost
 	sd t0, 0(t1)
